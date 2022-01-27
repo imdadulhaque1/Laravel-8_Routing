@@ -8,4 +8,7 @@
     <form action="{{route('myAbout')}}">
         <input type="submit" Value="About Site" />
     </form>
+    <form action="{{route('sitePosts')}}">
+        <input type="submit" Value="My Posts" />
+    </form>
 </div>

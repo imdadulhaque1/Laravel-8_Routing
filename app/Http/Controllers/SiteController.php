@@ -10,7 +10,7 @@ class SiteController extends Controller
         return view('Site');
     }
 
-    public function MyPosts($post_id){
+    public function MyPosts($post_id=""){
         echo "<h1>ID:".$post_id."</h1>";
         return view('myPosts');
     }

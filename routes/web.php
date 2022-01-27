@@ -28,8 +28,8 @@ Route::get('/about', [AboutController::class, 'About'])->name('myAbout');
 // --> Routing with View | Not Connected with Controller and it's connected directly 'view to route'
 Route::view('/test-view', "viewRoute")->name('viewAndRoute');
 
-// ---------> Parameter in Routing
-Route::get('/site/myposts/{id}', [SiteController::class, "MyPosts"])->name('sitePosts');
+// ---------> Parameter in Routing | Optional Parameter in Route
+Route::get('/site/myposts/{id?}', [SiteController::class, "MyPosts"])->name('sitePosts');
 
 // Route::get("/show-message", [ContollerSite::class, "showMessage"]);
 // Route::get("/blog-status", [BlogController::class, "BlogStatus"])->name('blogStatus');
