@@ -4,4 +4,7 @@
     <form action="{{route('blogStatus')}}">
         <input type="submit" Value="Blog Site" />
     </form>
+    <form action="/data-pass">
+        <input type="submit" Value="Data Passing Via Routing" />
+    </form>
 </div>
