@@ -42,7 +42,7 @@ Route::get("/add-form", function () {
     return redirect()->route("mySite");
 });
 
-// --------> Routing with Regular Expression as parameter of ID
+// --------> Routing with Regular Expression as parameter of ID and Name
 Route::get('/accounts/{id}/{name}', function($id, $name){
     echo "ID: ".$id, " Name: ".$name;
 })->where([
@@ -51,6 +51,15 @@ Route::get('/accounts/{id}/{name}', function($id, $name){
 ]);
 
 
+// --------> Data Passing via routing
+Route::get('/data-pass', function () {
+    $data=[
+        "name" => "Imdadul Haque",
+        "email" => "imdadul15-1440@diu.edu.bd",
+        "designation" => "Software Engineer",
+    ];
+    return view("DataPass", $data);   // DataPass.blade.php
+});
 
 
 
