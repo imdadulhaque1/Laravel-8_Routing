@@ -21,4 +21,7 @@
     <form action="/add-form">
         <input type="submit" Value="Redirect to Site page" />
     </form>
+    <form action="/data-pass">
+        <input type="submit" Value="Data Passing Via Routing" />
+    </form>
 </div>

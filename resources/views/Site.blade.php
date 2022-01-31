@@ -11,4 +11,7 @@
     <form action="{{route('sitePosts')}}">
         <input type="submit" Value="My Posts" />
     </form>
+    <form action="/data-pass">
+        <input type="submit" Value="Data Passing Via Routing" />
+    </form>
 </div>
