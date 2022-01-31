@@ -18,4 +18,7 @@
     <form action="{{route('viewAndRoute')}}">
         <input type="submit" value="View to Route">
     </form>
+    <form action="/add-form">
+        <input type="submit" Value="Redirect to Site page" />
+    </form>
 </div>
