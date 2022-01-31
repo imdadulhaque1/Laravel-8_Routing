@@ -38,7 +38,8 @@ Route::get('/site/myposts/{id?}', [SiteController::class, "MyPosts"])->name('sit
 // --------> Another way to Redirect one to another page (Undefined url redirect to site url)
 Route::get("/add-form", function () {
     echo "<h2>Add Forms</h2>";
-    return redirect("site");
+    // return redirect("site");
+    return redirect()->route("mySite");
 });
 
 
