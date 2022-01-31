@@ -52,14 +52,26 @@ Route::get('/accounts/{id}/{name}', function($id, $name){
 
 
 // --------> Data Passing via routing
+// Route::get('/data-pass', function () {
+//     $data=[
+//         "name" => "Imdadul Haque",
+//         "email" => "imdadul15-1440@diu.edu.bd",
+//         "designation" => "Software Engineer",
+//     ];
+//     return view("DataPass", $data);   // DataPass.blade.php
+// });
+
+// --------> Data Passing via Compact Function | Data Passing Via Array is better than Campact() function
 Route::get('/data-pass', function () {
-    $data=[
-        "name" => "Imdadul Haque",
-        "email" => "imdadul15-1440@diu.edu.bd",
-        "designation" => "Software Engineer",
-    ];
-    return view("DataPass", $data);   // DataPass.blade.php
+ 
+    $name = "Imdadul Haque";
+    $email = "imdadul15-1440@diu.edu.bd";
+    $designation = "Software Engineer";
+
+    
+    return view("DataPass", compact("name", "email", "designation"));   // DataPass.blade.php
 });
+
 
 
 
