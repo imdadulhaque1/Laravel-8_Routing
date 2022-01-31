@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\DataPassController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,27 +53,29 @@ Route::get('/accounts/{id}/{name}', function($id, $name){
 
 
 // --------> Data Passing via routing
-// Route::get('/data-pass', function () {
-//     $data=[
-//         "name" => "Imdadul Haque",
-//         "email" => "imdadul15-1440@diu.edu.bd",
-//         "designation" => "Software Engineer",
-//     ];
-//     return view("DataPass", $data);   // DataPass.blade.php
-// });
-
-// --------> Data Passing via Compact Function | Data Passing Via Array is better than Campact() function
 Route::get('/data-pass', function () {
- 
-    $name = "Imdadul Haque";
-    $email = "imdadul15-1440@diu.edu.bd";
-    $designation = "Software Engineer";
-
-    
-    return view("DataPass", compact("name", "email", "designation"));   // DataPass.blade.php
+    $data=[
+        "name" => "Imdadul Haque",
+        "email" => "imdadul15-1440@diu.edu.bd",
+        "designation" => "Software Engineer",
+    ];
+    return view("DataPass", $data);   // DataPass.blade.php
 });
 
+// --------> Data Passing via Compact Function | Data Passing Via Array is better than Campact() function
+// Route::get('/data-pass', function () {
+ 
+//     $name = "Imdadul Haque";
+//     $email = "imdadul15-1440@diu.edu.bd";
+//     $designation = "Software Engineer";
 
+    
+//     return view("DataPass", compact("name", "email", "designation"));   // DataPass.blade.php
+// });
+
+
+//--------> Data Passing Via Controller | Just make route in web.php
+Route::get('/data-pass-controller', [DataPassController::class, "DataPassingController"])->name("DataPassingViaController");
 
 
 
