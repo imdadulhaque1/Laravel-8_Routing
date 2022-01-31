@@ -42,6 +42,15 @@ Route::get("/add-form", function () {
     return redirect()->route("mySite");
 });
 
+// --------> Routing with Regular Expression as parameter of ID
+Route::get('/accounts/{id}/{name}', function($id, $name){
+    echo "ID: ".$id, " Name: ".$name;
+})->where([
+    "id" => "[0-9]+",
+    "name" => "[a-zA-Z]+"
+]);
+
+
 
 
 
