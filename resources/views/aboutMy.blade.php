@@ -10,4 +10,7 @@
     <form action="{{route('sitePosts')}}">
         <input type="submit" Value="My Posts" />
     </form>
+    <form action="{{route('DataPassingViaController')}}">
+        <input type="submit" Value="Data Passing Using Controller" />
+    </form>
 </div>

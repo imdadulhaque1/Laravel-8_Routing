@@ -14,4 +14,7 @@
     <form action="/data-pass">
         <input type="submit" Value="Data Passing Via Routing" />
     </form>
+    <form action="{{route('DataPassingViaController')}}">
+        <input type="submit" Value="Data Passing Using Controller" />
+    </form>
 </div>
