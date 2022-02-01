@@ -13,3 +13,10 @@
 @else
     <h5> Age {{$age}} is less than 20.</h5>
 @endif
+
+
+<h1>Conditional Statement using Foreeach Loop</h1>
+@foreach ($data as $num )
+    {{-- Num: {{ $num }}<br/> --}}
+    <h3>Number: {{$num}}</h3>
+@endforeach
