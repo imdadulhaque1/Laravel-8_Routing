@@ -15,8 +15,13 @@
 @endif
 
 
-<h1>Conditional Statement using Foreeach Loop</h1>
+<h1>Conditional Statement using Foreach Loop</h1>
 @foreach ($data as $num )
     {{-- Num: {{ $num }}<br/> --}}
-    <h3>Number: {{$num}}</h3>
+    {{-- <h3>Number: {{$num}}</h3> --}}
+    @if($num%2 === 0)
+        <h2>Even Number: {{$num}}</h2>
+    @else
+        <h2>Odd Number: {{$num}}</h2>
+    @endif
 @endforeach
