@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\DataPassController;
+use App\Http\Controllers\ConditionalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,8 +78,8 @@ Route::get('/data-pass', function () {
 //--------> Data Passing Via Controller | Just make route in web.php
 Route::get('/data-pass-controller', [DataPassController::class, "DataPassingController"])->name("DataPassingViaController");
 
-
-
+//--------> Conditional Statements in Laravel
+Route::get('/condition', [ConditionalController::class, "conditionStatements"])->name("ConditionalState");
 
 
 
